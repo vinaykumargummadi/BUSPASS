@@ -1,6 +1,6 @@
 import { IonButton, IonCol, IonContent, IonHeader, IonInput, IonItem, IonLabel, IonPage, IonRow, IonSelect, IonSelectOption, IonTitle, IonToolbar } from "@ionic/react";
 import React, { useState } from "react";
-import config from "../FireConfig";
+// import config from "../FireBaseConfig";
 import Firebase from "firebase";
 
 const Apply : React.FC = () => {
@@ -10,7 +10,8 @@ const Apply : React.FC = () => {
   const[usrcnumber,setNumber] = useState('');
   const[usrgender,setGender] = useState('');
   const[usrvalidity,setValidity] = useState('');
-
+  
+  //Json object
   var data =[
       {
           name:usrname,
@@ -28,7 +29,7 @@ const Apply : React.FC = () => {
     writeUserData();
   }  
     function writeUserData() {
-    Firebase.database().ref('/users').set(data);
+    Firebase.database().ref('/users').child('').push(data);
     // throw new Error("Function not implemented.");
 }
  return(

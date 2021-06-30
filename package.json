@@ -62,7 +62,8 @@
     ]
   },
   "devDependencies": {
-    "@capacitor/cli": "3.0.1"
+    "@capacitor/cli": "3.0.1",
+    "@types/firebase": "^3.2.1"
   },
   "description": "An Ionic project"
 }

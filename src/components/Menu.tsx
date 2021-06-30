@@ -22,23 +22,13 @@ const Menu: React.FC = () => {
           <IonListHeader>Alex</IonListHeader>
           <IonNote>Alexcownay@gmail.com</IonNote>
           <IonMenuToggle autoHide={false}>
-              <IonItem routerLink="apply" lines="none">
-                <IonLabel>Apply</IonLabel>
-              </IonItem>
               <IonItem routerLink="dashboard" lines="none">
                 <IonLabel>Dashboard</IonLabel>
               </IonItem>
+              <IonItem routerLink="Apply" lines="none">
+                <IonLabel>Apply</IonLabel>
+              </IonItem>
           </IonMenuToggle>
-          {/* {appPages.map((appPage, index) => {
-            return (
-              <IonMenuToggle key={index} autoHide={false}>
-                <IonItem className={location.pathname === appPage.url ? 'selected' : ''} routerLink={appPage.url} routerDirection="none" lines="none" detail={false}>
-                  <IonIcon slot="start" ios={appPage.iosIcon} md={appPage.mdIcon} />
-                  <IonLabel>{appPage.title}</IonLabel>
-                </IonItem>
-              </IonMenuToggle>
-            );
-          })} */}
         </IonList>
       </IonContent>
     </IonMenu>
