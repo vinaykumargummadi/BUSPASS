@@ -1,7 +1,7 @@
 import { IonButton, IonCol, IonContent, IonHeader, IonInput, IonItem, IonLabel, IonPage, IonRow, IonSelect, IonSelectOption, IonTitle, IonToolbar } from "@ionic/react";
 import React, { useState } from "react";
 import config from "../FireConfig";
-import Firebase from "firebase/app";
+import Firebase from "firebase";
 
 const Apply : React.FC = () => {
   const[usrname,setName] = useState('');
@@ -11,14 +11,25 @@ const Apply : React.FC = () => {
   const[usrgender,setGender] = useState('');
   const[usrvalidity,setValidity] = useState('');
 
+  var data =[
+      {
+          name:usrname,
+          email:usremail,
+          aadhar:usrAadhar,
+          contact:usrcnumber,
+          gender:usrgender,
+          validity:usrvalidity
+      }
+  ]
   function ConnectDB(){
-    console.log(usrname+'\n'+usremail+'\n'+usrgender+'\n'+usrAadhar+'\n'+usrcnumber+'\n'+usrvalidity);
-    Firebase.initializeApp(config);
+    console.log(data);
+
+    // Firebase.initializeApp(config);
     writeUserData();
   }  
     function writeUserData() {
-    throw new Error("Function not implemented.");
-    Firebase.database().ref().set(usrname);
+    Firebase.database().ref('/users').set(data);
+    // throw new Error("Function not implemented.");
 }
  return(
  <IonPage>
