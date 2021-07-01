@@ -11,18 +11,38 @@ const config = {
   }
   firebase.initializeApp(config)
 
+  export function getCurrentUser() {
+    return new Promise((reslove,reject) => {
+      const unSubscribe = firebase.auth().onAuthStateChanged(function(user){
+          if(user){
+            reslove(user)
+          }
+          else{
+            reslove(null)
+          }
+          unSubscribe()
+      })
+    })
+  }
+
   export async function loginUser (username: string,password: string){
     try{
       const email = username+''+'@vbuss.com'
       const res = await firebase.auth().signInWithEmailAndPassword(email,password);
-      console.log(res)
-      return true
+      return res
     }
     catch(error){
       Toast(error.message,4000)
       return false
     }
   }
+
+  export function logoutUser() {
+    return firebase.auth().signOut()
+  }
+
+
+
 
   export async function addUser(username:string,password:string) {
     try{

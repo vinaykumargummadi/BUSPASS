@@ -28,6 +28,9 @@ const Menu: React.FC = () => {
               <IonItem routerLink="Apply" lines="none">
                 <IonLabel>Apply</IonLabel>
               </IonItem>
+              {/* <IonItem routerLink="/" lines="none">
+                <IonLabel>Logout</IonLabel>
+              </IonItem> */}
           </IonMenuToggle>
         </IonList>
       </IonContent>

@@ -1,9 +1,13 @@
-import { IonButton, IonCol, IonContent, IonHeader, IonInput, IonItem, IonLabel, IonPage, IonRow, IonSelect, IonSelectOption, IonTitle, IonToolbar } from "@ionic/react";
+import { IonButton, IonCol, IonContent, IonHeader, IonInput, IonItem, IonLabel, IonLoading, IonPage, IonRow, IonSelect, IonSelectOption, IonTitle, IonToolbar } from "@ionic/react";
 import React, { useState } from "react";
 // import config from "../FireBaseConfig";
 import Firebase from "firebase";
+import { Toast } from "../toast";
+import { useHistory } from "react-router";
 
 const Apply : React.FC = () => {
+  const history = useHistory()
+    const[busy,setBusy] = useState(false)
   const[usrname,setName] = useState('');
   const[usremail,setEmail] = useState('');
   const[usrAadhar,setAadhar] = useState('');
@@ -24,21 +28,23 @@ const Apply : React.FC = () => {
   ]
   function ConnectDB(){
     console.log(data);
-
-    // Firebase.initializeApp(config);
     writeUserData();
   }  
     function writeUserData() {
-    Firebase.database().ref('/users').child('').push(data);
-    // throw new Error("Function not implemented.");
-}
+      setBusy(true)
+      Firebase.database().ref('/users').child('/').push(data);
+      Toast('Application is submitted!',3000)
+      history.replace('/dashboard')
+      setBusy(false)
+
+    }
  return(
  <IonPage>
-      <IonHeader>
+      {/* <IonHeader>
         <IonToolbar>
           <IonTitle>Virtual BUS PASS</IonTitle>
         </IonToolbar>
-      </IonHeader>
+      </IonHeader> */}
       <IonContent fullscreen>
           <h6 className="heading">Apply for the Virtual BUS PASS</h6>
           <p className="subheading">By filling out this form</p>
@@ -74,6 +80,7 @@ const Apply : React.FC = () => {
         <IonItem>
           <IonInput type="number" placeholder="Enter Aadhar Number" onIonChange={e => setNumber(e.detail.value!)} clearInput></IonInput>
         </IonItem><br/>
+            <IonLoading message="Logging out.." duration={0} isOpen={busy}></IonLoading>
         <IonButton color="success" expand="block" shape="round" onClick={ConnectDB}>Submit</IonButton>
       </IonContent>
     </IonPage>
@@ -81,12 +88,5 @@ const Apply : React.FC = () => {
 };
 export default Apply;
 
-function setName(arg0: string): void {
-    throw new Error("Function not implemented.");
-}
-
-function setEmail(arg0: string): void {
-    throw new Error("Function not implemented.");
-}
 
 
