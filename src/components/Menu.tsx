@@ -34,6 +34,9 @@ const Menu: React.FC = () => {
               <IonItem routerLink="QRcode" lines="none">
                 <IonLabel>QR Code</IonLabel>
               </IonItem>
+              <IonItem routerLink="logout" lines="none">
+                <IonLabel>Log OUT</IonLabel>
+              </IonItem>
           </IonMenuToggle>
         </IonList>
       </IonContent>

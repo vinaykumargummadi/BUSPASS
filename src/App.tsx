@@ -9,6 +9,7 @@ import Register from './pages/register';
 import Dashboard from './pages/dashboard';
 import Profile from './pages/profile';
 import QRcode from './pages/qrcode'
+import Logout from './pages/logout'
 
 /* Core CSS required for Ionic components to work properly */
 import '@ionic/react/css/core.css';
@@ -44,6 +45,7 @@ const RoutingSystem: React.FC = () =>{
             <Route path="/dashboard" component={Dashboard} exact />
             <Route path="/profile" component={Profile} exact />
             <Route path="/QRCode" component={QRcode} exact />
+            <Route path="/Logout" component={Logout} exact />
           </IonRouterOutlet>
       </IonReactRouter>
   )
