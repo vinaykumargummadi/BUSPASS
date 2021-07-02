@@ -13,24 +13,27 @@ import {
 import { useLocation } from 'react-router-dom';
 import { archiveOutline, archiveSharp, bookmarkOutline, heartOutline, heartSharp, scanOutline,  trashOutline, trashSharp, warningOutline, warningSharp, bookOutline, personCircleOutline, refreshOutline } from 'ionicons/icons';
 import './Menu.css';
+import { useSelector } from 'react-redux';
 
 const Menu: React.FC = () => {
+      const username = useSelector((state:any)=> state.user.username)
+
   return (
     <IonMenu contentId="main" type="overlay">
       <IonContent>
         <IonList id="inbox-list">
-          <IonListHeader>Alex</IonListHeader>
-          <IonNote>Alexcownay@gmail.com</IonNote>
-          <IonMenuToggle autoHide={false}>
-              <IonItem routerLink="dashboard" lines="none">
-                <IonLabel>Dashboard</IonLabel>
-              </IonItem>
+          <IonListHeader>{username}</IonListHeader>
+          <IonNote>{username}@vbuss.com</IonNote>
+          <IonMenuToggle>
               <IonItem routerLink="Apply" lines="none">
                 <IonLabel>Apply</IonLabel>
               </IonItem>
-              {/* <IonItem routerLink="/" lines="none">
-                <IonLabel>Logout</IonLabel>
-              </IonItem> */}
+              <IonItem routerLink="Profile" lines="none">
+                <IonLabel>Profile</IonLabel>
+              </IonItem>
+              <IonItem routerLink="QRcode" lines="none">
+                <IonLabel>QR Code</IonLabel>
+              </IonItem>
           </IonMenuToggle>
         </IonList>
       </IonContent>

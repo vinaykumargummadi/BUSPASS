@@ -4,6 +4,7 @@ import React, { useState } from "react";
 import Firebase from "firebase";
 import { Toast } from "../toast";
 import { useHistory } from "react-router";
+import "../assets/css/apply.css";
 
 const Apply : React.FC = () => {
   const history = useHistory()
@@ -40,11 +41,6 @@ const Apply : React.FC = () => {
     }
  return(
  <IonPage>
-      {/* <IonHeader>
-        <IonToolbar>
-          <IonTitle>Virtual BUS PASS</IonTitle>
-        </IonToolbar>
-      </IonHeader> */}
       <IonContent fullscreen>
           <h6 className="heading">Apply for the Virtual BUS PASS</h6>
           <p className="subheading">By filling out this form</p>
@@ -81,7 +77,7 @@ const Apply : React.FC = () => {
           <IonInput type="number" placeholder="Enter Aadhar Number" onIonChange={e => setNumber(e.detail.value!)} clearInput></IonInput>
         </IonItem><br/>
             <IonLoading message="Logging out.." duration={0} isOpen={busy}></IonLoading>
-        <IonButton color="success" expand="block" shape="round" onClick={ConnectDB}>Submit</IonButton>
+        <IonButton expand="block" shape="round" id="submit-btn" onClick={ConnectDB}>Submit</IonButton>
       </IonContent>
     </IonPage>
   )
