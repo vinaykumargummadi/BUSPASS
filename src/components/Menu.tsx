@@ -25,6 +25,9 @@ const Menu: React.FC = () => {
           <IonListHeader>{username}</IonListHeader>
           <IonNote>{username}@vbuss.com</IonNote>
           <IonMenuToggle>
+              <IonItem routerLink="Dashboard" lines="none">
+                <IonLabel>Dashboard</IonLabel>
+              </IonItem>
               <IonItem routerLink="Apply" lines="none">
                 <IonLabel>Apply</IonLabel>
               </IonItem>

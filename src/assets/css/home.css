@@ -1,5 +1,102 @@
+@import url("https://fonts.googleapis.com/css2?family=Otomanopee+One&family=Poppins&display=swap");
+* {
+  font-family: "Poppins", sans-serif;
+}
+
+#page-title {
+  text-align: center;
+  color: #fff;
+  background-color: #dd555d;
+}
+
+.section-title {
+  text-align: center;
+  color: #dd555d;
+}
+
+.section-subtitle {
+  color: #aaa4a4;
+  text-align: center;
+}
+
+ion-lable {
+  color: #dd555d;
+}
+
+.toolbar-container {
+  background-color: #dd555d;
+  color: #fff;
+}
+
+.toolbar-background {
+  background-color: #dd555d !important;
+  color: #fff !important;
+}
+
+#qrtag,
+#qrinfo {
+  display: none;
+}
+
+#qrtag {
+  width: 150px;
+  margin: 30px auto;
+}
+
+#reveal {
+  display: none;
+}
+
 .mytitle {
   text-align: center;
-  color: #6f30aa;
+  color: #dd555d;
+}
+
+.button-inner {
+  color: #0ff !important;
+}
+
+.login-wrap {
+  margin: 50px 0px;
+  text-align: center;
+}
+
+.login-wrap ion-col {
+  margin: 0px auto;
+}
+
+.backdrop {
+  background-color: #dd555d;
+  position: relative;
+  color: #fff;
+  text-align: center;
+}
+
+.backdrop .main-title {
+  font-size: 28px;
+  font-family: "Otomanopee One", sans-serif;
+}
+
+.backdrop .sub-title {
+  font-weight: 400;
+  font-size: 20px;
+  padding: 0px 20px;
+}
+
+.backdrop .desc {
+  padding: 0px 20px;
+  font-weight: 300;
+  color: rgba(255, 255, 255, 0.726);
+}
+
+.username {
+  display: inline;
+}
+
+.username span {
+  color: #dd555d;
+  text-transform: uppercase;
+  font-weight: 500;
+  font-family: "Otomanopee One", sans-serif;
 }
 /*# sourceMappingURL=home.css.map */

@@ -30,6 +30,7 @@ import '@ionic/react/css/display.css';
 /* Theme variables */
 import './theme/variables.css';
 import './assets/css/home.css'
+import './assets/css/function.css'
 import {getCurrentUser} from './FireBaseConfig'
 import { useEffect, useState } from 'react';
 import { setUserState } from './redux/action';
@@ -62,8 +63,7 @@ const App: React.FC = () => {
           window.history.replaceState({},'','/dashboard')   
         }
         else{
-          window.history.replaceState({},'','/')   
-
+          window.history.replaceState({},'','/')
         }
         setBusy(false)
       }

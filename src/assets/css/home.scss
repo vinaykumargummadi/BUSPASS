@@ -1,4 +1,47 @@
+@import "./function.scss";
+
 .mytitle {
   text-align: center;
-  color: rgb(111, 48, 170);
+  color: $primary-color;
+}
+.button-inner {
+  color: #0ff !important;
+}
+.login-wrap {
+  margin: 50px 0px;
+  text-align: center;
+  ion-col {
+    // border: 1px solid red;
+    margin: 0px auto;
+  }
+}
+.backdrop {
+  background-color: $primary-color;
+  position: relative;
+  color: #fff;
+  text-align: center;
+  .main-title {
+    font-size: 28px;
+    font-family: "Otomanopee One", sans-serif;
+  }
+  .sub-title {
+    font-weight: 400;
+    font-size: 20px;
+    padding: 0px 20px;
+  }
+  .desc {
+    padding: 0px 20px;
+    font-weight: 300;
+    color: rgba(255, 255, 255, 0.726);
+  }
+}
+//dashboard
+.username {
+  display: inline;
+  span {
+    color: $primary-color;
+    text-transform: uppercase;
+    font-weight: 500;
+    font-family: "Otomanopee One", sans-serif;
+  }
 }

@@ -28,7 +28,7 @@ const config = {
   export async function loginUser (username: string,password: string){
     try{
       const email = username+''+'@vbuss.com'
-      const res = await firebase.auth().signInWithEmailAndPassword(email,password);
+      const res = await firebase.auth().signInWithEmailAndPassword(username,password);
       return res
     }
     catch(error){
