@@ -1,0 +1,44 @@
+$primary-color: #dd555d;
+$info-text: #aaa4a4;
+@import url("https://fonts.googleapis.com/css2?family=Otomanopee+One&family=Poppins&display=swap");
+
+* {
+  font-family: "Poppins", sans-serif;
+}
+ion-header {
+  text-align: center;
+  color: #fff;
+  --background-color: $primary-color !important;
+}
+.section-title {
+  text-align: center;
+  color: $primary-color;
+}
+.section-subtitle {
+  color: $info-text;
+  text-align: center;
+}
+ion-lable {
+  color: $primary-color;
+}
+.toolbar-container {
+  background-color: $primary-color;
+  color: #fff;
+}
+.toolbar-background {
+  background-color: $primary-color !important;
+  color: #fff !important;
+}
+//QR Code
+#qrtag,
+#qrinfo {
+  display: none;
+}
+#qrtag {
+  width: 150px;
+  margin: 30px auto;
+}
+//profile-section
+#reveal {
+  display: none;
+}
