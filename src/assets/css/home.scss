@@ -45,3 +45,15 @@
     font-family: "Otomanopee One", sans-serif;
   }
 }
+.wrapper {
+  position: absolute;
+  top: 50px;
+  width: 250px;
+  height: 50px;
+  background: rgb(221, 85, 93);
+  background: linear-gradient(
+    304deg,
+    rgba(221, 85, 93, 1) 35%,
+    rgba(255, 0, 61, 1) 100%
+  );
+}

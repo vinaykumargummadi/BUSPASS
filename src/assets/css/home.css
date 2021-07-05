@@ -3,10 +3,10 @@
   font-family: "Poppins", sans-serif;
 }
 
-#page-title {
+ion-header {
   text-align: center;
   color: #fff;
-  background-color: #dd555d;
+  --background-color: $primary-color !important;
 }
 
 .section-title {
@@ -98,5 +98,14 @@ ion-lable {
   text-transform: uppercase;
   font-weight: 500;
   font-family: "Otomanopee One", sans-serif;
+}
+
+.wrapper {
+  position: absolute;
+  top: 50px;
+  width: 250px;
+  height: 50px;
+  background: #dd555d;
+  background: linear-gradient(304deg, #dd555d 35%, #ff003d 100%);
 }
 /*# sourceMappingURL=home.css.map */
