@@ -100,12 +100,72 @@ ion-lable {
   font-family: "Otomanopee One", sans-serif;
 }
 
+img {
+  z-index: -1;
+}
+
 .wrapper {
   position: absolute;
-  top: 50px;
-  width: 250px;
-  height: 50px;
+  z-index: -1;
+  top: 230px;
+  left: 0px;
+  width: 360px;
+  height: 355px;
+  border-radius: 67% 0% 0% 0%;
   background: #dd555d;
   background: linear-gradient(304deg, #dd555d 35%, #ff003d 100%);
+}
+
+.wrapper .text-section {
+  position: absolute;
+  top: 20px;
+  right: 10px;
+  width: 350px;
+  color: #fff;
+}
+
+.wrapper .text-section .dash-title {
+  text-align: right;
+  font-size: 12px;
+}
+
+.wrapper .text-section .dash-title #hero-text {
+  font-family: "Otomanopee One", sans-serif;
+  font-size: 24px;
+  font-weight: 500;
+}
+
+.wrapper .text-section .dash-desc {
+  text-align: right;
+}
+
+.wrapper .text-section .dash-desc .ins-desc {
+  list-style-type: square;
+  font-size: 14px;
+  color: #cccccc;
+  font-weight: 500;
+}
+
+.wrapper .copy-section {
+  position: absolute;
+  bottom: 5px;
+  left: 5px;
+  width: 350px;
+  color: #fff;
+}
+
+.wrapper .copy-section #hr {
+  border: 0;
+  clear: both;
+  display: block;
+  width: 96%;
+  background-color: rgba(255, 255, 255, 0.438);
+  height: 1px;
+}
+
+.wrapper .copy-section .c-desc {
+  margin: 0;
+  font-size: 15px;
+  text-align: center;
 }
 /*# sourceMappingURL=home.css.map */
