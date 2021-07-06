@@ -1,16 +1,14 @@
 const app = require('express')()
-const path = require('path')
 const shortid = require('shortid')
 const Razorpay = require('razorpay')
 const cors = require('cors')
 const bodyParser = require('body-parser')
 
 app.use(cors())
-app.use(bodyParser.json())
 
 const razorpay = new Razorpay({
-	key_id: 'rzp_test_UnT389sYfVBDeg',
-	key_secret: '3dgXE1xUx2oDre4Du07Sta2z'
+	key_id: 'rzp_test_vibACbsiFiAfOm',
+	key_secret: 'ZnQkstwFqdMWzBp4cgEfKcxj'
 })
 
 app.post('/verification', (req, res) => {
@@ -62,6 +60,6 @@ app.post('/razorpay', async (req, res) => {
 	}
 })
 
-app.listen(1337, () => {
-	console.log('Listening on 1337')
+app.listen(1336, () => {
+	console.log('Listening on 1336')
 })

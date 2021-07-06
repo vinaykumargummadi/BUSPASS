@@ -1,14 +1,20 @@
-#page-title {
+@import url("https://fonts.googleapis.com/css2?family=Otomanopee+One&family=Poppins&display=swap");
+* {
+  font-family: "Poppins", sans-serif;
+}
+
+ion-header {
+  text-align: center;
+  color: #fff;
+  --background-color: $primary-color !important;
+}
+
+.section-title {
   text-align: center;
   color: #dd555d;
 }
 
-.title {
-  text-align: center;
-  color: #dd555d;
-}
-
-.subtitle {
+.section-subtitle {
   color: #aaa4a4;
   text-align: center;
 }
@@ -17,9 +23,28 @@ ion-lable {
   color: #dd555d;
 }
 
-#profile {
-  text-align: center;
-  display: block;
+.toolbar-container {
+  background-color: #dd555d;
+  color: #fff;
+}
+
+.toolbar-background {
+  background-color: #dd555d !important;
+  color: #fff !important;
+}
+
+#qrtag,
+#qrinfo {
+  display: none;
+}
+
+#qrtag {
+  width: 150px;
+  margin: 30px auto;
+}
+
+#reveal {
+  display: none;
 }
 
 .heading {
